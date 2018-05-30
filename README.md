@@ -40,14 +40,14 @@ $ chmod 0600 /etc/mail/auth/*
 
 5.Configure your sendmail.mc
 Open /etc/mail/sendmail.mc file in your text-editor and copy the follow lines and paste before the first MAILER line:
-
+```hs
 define(`SMART_HOST',`smtp.gmail.com')dnl
 define(`RELAY_MAILER_ARGS', `TCP $h 587')dnl
 define(`ESMTP_MAILER_ARGS', `TCP $h 587')dnl
 define(`confAUTH_MECHANISMS', `EXTERNAL GSSAPI DIGEST-MD5 CRAM-MD5 LOGIN PLAIN')dnl
 FEATURE(`authinfo',`hash /etc/mail/auth/auth-info')dnl
 TRUST_AUTH_MECH(`EXTERNAL DIGEST-MD5 CRAM-MD5 LOGIN PLAIN')
-
+```
 6.Save the file and make the sendmail.cf:
 ```sh
 $ cd /etc/mail
