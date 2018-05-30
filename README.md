@@ -20,11 +20,14 @@ $ mkdir -m 700 -p /etc/mail/auth
 ```
 
 3.Create auth-info file to store the Gmail credentials:
-Open the auth-info file in your text-editor and copy & paste the follow lines. Replace <USERNAME> and <PASSWORD> placeholders with your credentials:
+
   ```sh
 $ touch /etc/mail/auth/auth-info
 ```
+Open the auth-info file in your text-editor and copy & paste the follow lines. Replace USERNAME and PASSWORD placeholders with your credentials:
+  ```sh
 AuthInfo:smtp.gmail.com "U:root" "I:<USERNAME>@gmail.com" "P:<PASSWORD>"
+  ```
 
 4.Save the file and make the database-map:
   ```sh
