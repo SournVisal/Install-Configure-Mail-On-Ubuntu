@@ -28,7 +28,7 @@ Open the auth-info file in your text-editor and copy & paste the follow lines.
   ```sh
 AuthInfo:smtp.gmail.com "U:root" "I:<USERNAME>@gmail.com" "P:<PASSWORD>"
   ```
- Replace ```ssh <USERNAME> ``` and ```ssh <PASSWORD> ``` placeholders with your credentials:
+ Replace ``` <USERNAME> ``` and ``` <PASSWORD> ``` placeholders with your credentials:
  
 4.Save the file and make the database-map:
 -----------
