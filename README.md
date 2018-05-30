@@ -20,7 +20,7 @@ $ mkdir -m 700 -p /etc/mail/auth
 ```
 
 3.Create auth-info file to store the Gmail credentials:
-
+-------
   ```sh
 $ touch /etc/mail/auth/auth-info
 ```
@@ -31,6 +31,7 @@ AuthInfo:smtp.gmail.com "U:root" "I:<USERNAME>@gmail.com" "P:<PASSWORD>"
  Replace USERNAME and PASSWORD placeholders with your credentials:
  
 4.Save the file and make the database-map:
+-----------
   ```sh
 $ cd /etc/mail
 $ makemap hash /etc/mail/auth/auth-info < /etc/mail/auth/auth-info
@@ -43,6 +44,7 @@ $ chmod 0600 /etc/mail/auth/*
 ```
 
 5.Configure your sendmail.mc
+------------
 Open /etc/mail/sendmail.mc file in your text-editor and copy the follow lines and paste before the first MAILER line:
 ```hs
 define(`SMART_HOST',`smtp.gmail.com')dnl
@@ -53,12 +55,13 @@ FEATURE(`authinfo',`hash /etc/mail/auth/auth-info')dnl
 TRUST_AUTH_MECH(`EXTERNAL DIGEST-MD5 CRAM-MD5 LOGIN PLAIN')
 ```
 6.Save the file and make the sendmail.cf:
+----------
 ```sh
 $ cd /etc/mail
 $ m4 sendmail.mc > sendmail.cf
 ```
 7.Send the test email
-
+-----------
 Restart sendmail service:
 ```sh
 $ sh /etc/rc.d/rc.sendmail restart
