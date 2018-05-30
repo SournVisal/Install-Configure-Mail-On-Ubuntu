@@ -66,4 +66,8 @@ Restart sendmail service:
 ```sh
 $ sh /etc/rc.d/rc.sendmail restart
 ```
+or
+```sh
+$ /etc/init.d/sendmail restart
+```
 
