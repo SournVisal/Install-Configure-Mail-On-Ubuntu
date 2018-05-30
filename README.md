@@ -24,11 +24,12 @@ $ mkdir -m 700 -p /etc/mail/auth
   ```sh
 $ touch /etc/mail/auth/auth-info
 ```
-Open the auth-info file in your text-editor and copy & paste the follow lines. Replace USERNAME and PASSWORD placeholders with your credentials:
+Open the auth-info file in your text-editor and copy & paste the follow lines.
   ```sh
 AuthInfo:smtp.gmail.com "U:root" "I:<USERNAME>@gmail.com" "P:<PASSWORD>"
   ```
-
+ Replace USERNAME and PASSWORD placeholders with your credentials:
+ 
 4.Save the file and make the database-map:
   ```sh
 $ cd /etc/mail
@@ -56,9 +57,9 @@ TRUST_AUTH_MECH(`EXTERNAL DIGEST-MD5 CRAM-MD5 LOGIN PLAIN')
 $ cd /etc/mail
 $ m4 sendmail.mc > sendmail.cf
 ```
-Send the test email
+7.Send the test email
 
-7.Restart sendmail service:
+Restart sendmail service:
 ```sh
 $ sh /etc/rc.d/rc.sendmail restart
 ```
