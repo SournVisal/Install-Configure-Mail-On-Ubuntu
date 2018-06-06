@@ -70,4 +70,26 @@ or
 ```sh
 $ /etc/init.d/sendmail restart
 ```
+8. Now, you are ready for send the first email:
+-------------
+```sh
+$ echo 'e-Mail TEST'| mail -s TEST john.doe@example.org
+echo 'e-Mail TEST'| mail -s TESTING sophat.chhay@gmail.com
+```
+Test with smtp gmail port
+telnet smtp.gmail.com 587
+```sh
+cd /etc/mail/tls 
+sudo openssl dsaparam -out sendmail-common.prm 2048 
+sudo chown root:smmsp sendmail-common.prm 
+sudo chmod 0640 sendmail-common.prm 
+sudo dpkg --configure -a
+```
+9. Remove Sendmail
+-------------
+```sh
+/etc/init.d/sendmail stop
+apt-get purge sendmail*
+sudo reboot
+```
 
