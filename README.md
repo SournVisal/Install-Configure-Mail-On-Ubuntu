@@ -74,7 +74,7 @@ $ /etc/init.d/sendmail restart
 -------------
 ```sh
 $ echo 'e-Mail TEST'| mail -s TEST john.doe@example.org
-echo 'e-Mail TEST'| mail -s TESTING sophat.chhay@gmail.com
+echo 'e-Mail TEST'| mail -s TESTING chaksaray@gmail.com
 ```
 Test with smtp gmail port
 telnet smtp.gmail.com 587
