@@ -70,7 +70,7 @@ or
 ```sh
 $ /etc/init.d/sendmail restart
 ```
-8. Now, you are ready for send the first email:
+8.Now, you are ready for send the first email:
 -------------
 ```sh
 $ echo 'e-Mail TEST'| mail -s TEST john.doe@example.org
@@ -85,7 +85,7 @@ sudo chown root:smmsp sendmail-common.prm
 sudo chmod 0640 sendmail-common.prm 
 sudo dpkg --configure -a
 ```
-9. Remove Sendmail
+9.Remove Sendmail
 -------------
 ```sh
 /etc/init.d/sendmail stop
