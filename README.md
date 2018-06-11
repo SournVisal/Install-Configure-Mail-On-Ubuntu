@@ -74,5 +74,5 @@ or
 8.Now, you are ready for send the first email:
 -------------
 ```sh
-# echo 'e-Mail TEST'| mail -s TEST john.doe@example.org
+# echo 'e-Mail TEST'| mail -s TEST john.doe@gmail.com
 
