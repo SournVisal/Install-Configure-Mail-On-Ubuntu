@@ -60,7 +60,7 @@ TRUST_AUTH_MECH(`EXTERNAL DIGEST-MD5 CRAM-MD5 LOGIN PLAIN')
 # cd /etc/mail
 # m4 sendmail.mc > sendmail.cf
 ```
-7.Send the test email
+7.Manage email service
 -----------
 Restart sendmail service:
 ```sh
