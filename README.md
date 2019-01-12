@@ -45,7 +45,7 @@ For strong security, set the read-write permission only for root user:
 
 5.Configure your sendmail.mc
 ------------
-Open /etc/mail/sendmail.mc file in your text-editor and copy the follow lines and paste before the first MAILER line:
+Open /etc/mail/sendmail.mc file in your text-editor and copy the follow lines and paste before the MAILER_DEFINITIONS line:
 ```hs
 define(`SMART_HOST',`smtp.gmail.com')dnl
 define(`RELAY_MAILER_ARGS', `TCP $h 587')dnl
