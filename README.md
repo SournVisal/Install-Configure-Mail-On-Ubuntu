@@ -71,7 +71,7 @@ or
 # /etc/init.d/sendmail restart
 # /etc/init.d/sendmail stop
 ```
-8.Now, you are ready for send the first email:
+8.Now, you are ready for sending the first email:
 -------------
 ```sh
 # echo 'e-Mail TEST'| mail -s TEST john.doe@gmail.com
